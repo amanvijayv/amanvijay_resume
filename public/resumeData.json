@@ -1,0 +1,103 @@
+{
+  "main": {
+    "name":"Aman Vijay",
+    "occupation":"Web Developer",
+    "description":"Trained in and have industry experience in Full Stack development(Angular, React, Java, SQL, AWS, MySQL), currentlyworking as Front end developer. Cloud enthusiasts love to work on emerging technologies.",
+    "image":"profilepicAman.jpg",
+    "bio":"Trained in and have industry experience in Full Stack development(Angular, React, Java, SQL, AWS, MySQL), currentlyworking as Front end developer. Cloud enthusiasts love to work on emerging technologies.",
+    "contactmessage":"Get in touch with me",
+    "email": "amanvijayv@gmail.com",
+    "phone": "+91",
+    "address":{
+      "street":"Pratap Nagar",
+      "city":"Jaipur",
+      "state":"Rajasthan",
+      "zip": "302033"
+    },
+    "website": "https://www.amanvijay.com",
+    "resumedownload":"https://drive.google.com/file/d/1fiXs-FSTnnaW-PWmJkB-EURxjXgAxPOH/view?usp=sharing",
+    "social":[
+      {
+        "name":"twitter",
+        "url":"#",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/amanvijayv/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"#",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"",
+    "education":[
+      {
+        "school":"Jaipur Engineering College and Research Centre",
+        "degree":"Bachelor of Technology in Computer Science",
+        "graduated":"May 2019",
+        "description":""
+      },
+      {
+        "school":"St. Joseph Convent School",
+        "degree":"HSC",
+        "graduated":"May 2014",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"Capgemini",
+        "title":"Senior Software Engineer",
+        "years":"November 2020 - Present",
+        "description":"Designed UI architecture to refactor single angular application-based UI to multiple angular libraries for better reusability."
+      },
+      {
+        "company":"Capgemini",
+        "title":"Software Engineer",
+        "years":"May 2020 - October 2020",
+        "description":"Worked as Front end developer and responsible for developing a single-page application in Angular 7."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Angular",
+        "level":"60%"
+      },
+      {
+        "name":"React",
+        "level":"30%"
+      },
+      {
+        "name":"AWS",
+        "level":"20%"
+      },
+      {
+        "name":"HTML5",
+        "level":"80%"
+      },
+      {
+        "name":"CSS",
+        "level":"70%"
+      }      
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Demo",
+        "user":"Brian McCabe, The Adecco Group"
+      }
+    ]
+  }
+}
