@@ -22,6 +22,9 @@ const Contact = (props) => {
    const handleClose = () => {
       setState({ ...snackBarState, open: false });
    };
+   // State for submit loader
+   const [loader, setLoader] = useState('none');
+   // end
    // FormData State, other variables and Submit Form Method
    const [formData, setFormData] = useState({
       name: '',
@@ -50,6 +53,9 @@ const Contact = (props) => {
       })
    }
    const onSubmit = (event) => {
+      setLoader((prevValue) => {
+         return 'inline';
+      })
       event.preventDefault();
       setFormData({
          name: '',
@@ -60,10 +66,16 @@ const Contact = (props) => {
       console.log("Form Submitted", formData);
       axios.post(`https://portfolio-node-webapp.herokuapp.com/contact`, formData)
         .then(res => {
+         setLoader((prevValue) => {
+            return 'none';
+         })
          handleClick({ vertical: 'bottom', horizontal: 'right', snackMessage: `Thank you for your Message! I will get back to you as soon as possible`  });
          console.log("ressss", res);
         })
         .catch(error => {
+         setLoader((prevValue) => {
+            return 'none';
+         })
           console.error('There was an error !', error.message, "sdfasdfasdf");
           handleClick({ vertical: 'bottom', horizontal: 'right', snackMessage: 'Sorry, Please check you input once again.' });
         });
@@ -118,7 +130,7 @@ const Contact = (props) => {
 
                      <div>
                         <button type="submit" className="submit">Submit</button>
-                        <span id="image-loader">
+                        <span id="image-loader" style={{ display: loader }}>
                            <img alt="" src="images/loader.gif" />
                         </span>
                      </div>
