@@ -2,9 +2,9 @@
   "main": {
     "name":"Aman Vijay",
     "occupation":"Web Developer",
-    "description":"Trained in and have industry experience in Full Stack development(Angular, React, Java, SQL, AWS, MySQL), currently working as Front end developer. Cloud enthusiasts love to work on emerging technologies.",
+    "description":"Trained in and have industry experience in Full Stack development(Angular, React, Node, Java, AWS, MySQL). Cloud enthusiasts love to work on emerging technologies",
     "image":"profilepicAman.jpg",
-    "bio":"Trained in and have industry experience in Full Stack development(Angular, React, Java, SQL, AWS, MySQL), currently working as Front end developer. Cloud enthusiasts love to work on emerging technologies.",
+    "bio":"Trained in and have industry experience in Full Stack development(Angular, React, Node, Java, AWS, MySQL). Cloud enthusiasts love to work on emerging technologies",
     "contactmessage":"Get in touch with me",
     "email": "amanvijayv@gmail.com",
     "phone": "+91",
@@ -29,7 +29,7 @@
       },
       {
         "name":"github",
-        "url":"#",
+        "url":"https://github.com/amanvijayv",
         "className":"fa fa-github"
       }
     ]
@@ -53,13 +53,19 @@
     "work":[
       {
         "company":"Capgemini",
-        "title":"Senior Software Engineer",
-        "years":"November 2020 - Present",
+        "title":"Associate Consultant",
+        "years":"June 2021 - Present",
+        "description":"Working on a AWS cloud resource provisioning. Done a comparative analysis on cloudformation, terraform and AWS CDK"
+      },
+      {
+        "company":"Capgemini",
+        "title":"Senior Analyst",
+        "years":"November 2020 - May 2021",
         "description":"Designed UI architecture to refactor single angular application-based UI to multiple angular libraries for better reusability."
       },
       {
         "company":"Capgemini",
-        "title":"Software Engineer",
+        "title":"Senior Analyst",
         "years":"May 2020 - October 2020",
         "description":"Worked as Front end developer and responsible for developing a single-page application in Angular 7."
       }
@@ -70,21 +76,21 @@
         "level":"60%"
       },
       {
+        "name":"NodeJS",
+        "level":"30%"
+      },
+      {
         "name":"React",
         "level":"30%"
       },
       {
         "name":"AWS",
-        "level":"20%"
+        "level":"25%"
       },
       {
-        "name":"HTML5",
-        "level":"80%"
-      },
-      {
-        "name":"CSS",
+        "name":"HTML5 & CSS",
         "level":"70%"
-      }      
+      }    
     ]
   },
   "portfolio":{

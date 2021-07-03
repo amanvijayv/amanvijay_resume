@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
-class Header extends Component {
-  render() {
-
-    if(this.props.data){
-      var name = this.props.data.name;
-      var occupation= this.props.data.occupation;
-      var description= this.props.data.description;
-      var city= this.props.data.address.city;
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url} target="_blank"><i className={network.className}></i></a></li>
+const Header = (props) => {
+   if(props.data){
+      var name = props.data.name;
+      var occupation= props.data.occupation;
+      var description= props.data.description;
+      var city= props.data.address.city;
+      var networks= props.data.social.map(function(network){
+        return <li key={network.name}><a href={network.url} target="_blank" rel="noreferrer"><i className={network.className}></i></a></li>
       })
     }
-
-    return (
+   return (
       <header id="home">
 
       <nav id="nav-wrap">
@@ -49,7 +46,6 @@ class Header extends Component {
 
    </header>
     );
-  }
 }
 
 export default Header;

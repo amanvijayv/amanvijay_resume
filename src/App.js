@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
-import $ from 'jquery';
+import axios from 'axios';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -10,52 +10,57 @@ import Contact from './Components/Contact';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
 
-class App extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      resumeData: {}
-    };
+const App = () => {
+  const [state, setState] = useState({
+    foo: 'bar',
+    resumeData: {},
+    errorMessage: '',
+  })
 
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
+  useEffect(() => {
+    function getData() {
+      axios.get(`/resumeData.json`)
+        .then(res => {
+          setState((prevValue) => {
+            return {
+              ...prevValue,
+              resumeData: res.data
+            }
+          })
+        })
+        .catch(error => {
+          setState((prevValue) => {
+            return {
+              ...prevValue,
+              errorMessage: error.message
+            }
+          })
+          console.error('There was an error !', error);
+        });
+    }
+    getData();
+  }, []);
 
-  }
-
-  getResumeData(){
-    $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  componentDidMount(){
-    this.getResumeData();
-  }
-
-  render() {
+  if (Object.keys(state.resumeData).length === 0) {
     return (
-      <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
-        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
-        <Contact data={this.state.resumeData.main}/>
-        <Footer data={this.state.resumeData.main}/>
-      </div>
-    );
+      <h1>OOPS, something went wrong</h1>
+    )
   }
+
+  ReactGA.initialize('UA-110570651-1');
+  ReactGA.pageview(window.location.pathname);
+  return (
+    <div className="App">
+      <Header data={state.resumeData.main} />
+      <About data={state["resumeData"]["main"]} />
+      <Resume data={state.resumeData.resume} />
+      <Portfolio data={state.resumeData.portfolio} />
+      {/* <Testimonials data={state.resumeData.testimonials} /> */}
+      <Contact data={state.resumeData.main} />
+      <Footer data={state.resumeData.main} />
+    </div>
+  );
 }
 
 export default App;
