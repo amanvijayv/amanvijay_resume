@@ -48,11 +48,15 @@ class Contact extends Component {
 						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
 						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
                   </div>
-
+                  <div>
+						   <label htmlFor="contactEmail">Phone <span className="required">*</span></label>
+						   <input type="number" defaultValue="" size="35" id="contactPhone" name="contactPhone" onChange={this.handleChange}/>
+                  </div>
+{/* 
                   <div>
 						   <label htmlFor="contactSubject">Subject</label>
 						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
-                  </div>
+                  </div> */}
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
